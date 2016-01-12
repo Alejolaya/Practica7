@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class RegistroActivity extends AppCompatActivity {
-    private EditText nombre,apellido,correo,codigo,contraseña;
+    private EditText nombre,apellido,correo,contraseña;
     private Button aceptar;
     SQLiteDatabase data2;
 
@@ -23,7 +23,7 @@ public class RegistroActivity extends AppCompatActivity {
         apellido=(EditText)findViewById(R.id.apellido);
         correo=(EditText)findViewById(R.id.correo);
         contraseña=(EditText)findViewById(R.id.pass);
-        codigo=(EditText)findViewById(R.id.codigo);
+
 
 
 
@@ -35,13 +35,13 @@ public class RegistroActivity extends AppCompatActivity {
         backData.putExtra("apellido1", apellido.getText().toString());
         backData.putExtra("email1", correo.getText().toString());
         backData.putExtra("contraseña1", contraseña.getText().toString());
-        backData.putExtra("codigotarjeta1", codigo.getText().toString());
+
         setResult(1, backData);
         nombre.setText("");
         apellido.setText("");
         correo.setText("");
         contraseña.setText("");
-        codigo.setText("");
+
         finish();
 
 

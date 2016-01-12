@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         String name=preferences.getString("email","");
         String pass=preferences.getString("pass","");
         // se comprueba el nombre y la clave
-        String tabla="registrousuariosroyal";
+        String tabla="usuarios";
         String[] columna={"nombre","apellido"};
         String[] selectionArgs={name, pass};
         String selection="email = ?"+" and "+"contraseña = ?";
@@ -138,14 +138,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
     private void fromstart() {
-        databaseCreatorHelper help = new databaseCreatorHelper(this, "DATABASEROYAL", null,1);
+        databaseCreatorHelper help = new databaseCreatorHelper(this, "DATABASEUSUARIOS", null,1);
         database1=help.getWritableDatabase();//hago que a base de datos sea modificable
         // Toast.makeText(this, "Nombre: " + help.getDatabaseName().toString(), Toast.LENGTH_SHORT).show();
     }
 
 
     public void inicio(View v) {
-        String tabla="registrousuariosroyal";
+        String tabla="usuarios";
         String[] columna={"nombre","apellido"};
         String[] selectionArgs={usuario.getText().toString(), contraseña.getText().toString()};
         String selection="email = ?"+" and "+"contraseña = ?";
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             startActivity(inicio);
             finish();
         }else{
-            resultado="No se encuentra registrado";
+            resultado="Usuario o contraseña invalida";
             Toast.makeText(this,resultado.toString(),Toast.LENGTH_LONG).show();
             usuario.setText("");
             contraseña.setText("");
@@ -197,14 +197,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 String apellidoR=data.getStringExtra("apellido1");
                 String emailR=data.getStringExtra("email1");
                 String contraseñaR=data.getStringExtra("contraseña1");
-                String codigoR=data.getStringExtra("codigotarjeta1");
-                String tabla="registrousuariosroyal";
+
+                String tabla="usuarios";
                 ContentValues valor=new ContentValues();
                 valor.put("nombre",nombreR);
                 valor.put("apellido",apellidoR );
                 valor.put("email",emailR );
                 valor.put("contraseña",contraseñaR );
-                valor.put("codigotarjeta", codigoR);
+
                 if(database1.insert(tabla, null, valor)==-1){
                     Toast.makeText(getApplicationContext().getApplicationContext(),"Ocurrio un error"+"no se inserto el valor",Toast.LENGTH_LONG).show();
                 }else{

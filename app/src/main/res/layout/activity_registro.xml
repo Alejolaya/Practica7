@@ -76,26 +76,7 @@
             android:textAlignment="center"
             android:id="@+id/correo"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/codigotarj"
-            android:layout_marginTop="20dp"
-            android:textSize="25sp"
-            android:layout_marginLeft="@dimen/activity_vertical_margin"
-            android:typeface="sans"/>
-        <EditText
-            android:layout_width="370sp"
-            android:layout_height="50sp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="italic"
-            android:typeface="sans"
-            android:numeric="decimal"
-            android:textAlignment="center"
 
-            android:id="@+id/codigo"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
