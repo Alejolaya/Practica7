@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Practica7</string>
+    <string name="app_id">769473426490525</string>
+    <string name="server_client_id">117345359026-070jtbkkrhakt1sn37jta84mu34h236h.apps.googleusercontent.com</string>
+
+    <string name="usuaio">Email</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registro">Resgistrarse</string>
+
+    <string name="nombre">Nombre:</string>
+    <string name="apellido">Apellido:</string>
+    <string name="email">Email:</string>
+    <string name="codigotarj">Codigo De La Tarjeta:</string>
+    <string name="contrase">Contraseña: </string>
+    <string name="aceptar">Aceptar</string>
+    <string name="b_desconectar">login out</string>
+
+    <string name="btnSignin">Sing In</string>
+    <string name="btnSignout">Cerrar Sesion</string>
+    <string name="signed_out">^-^</string>
+    <string name="signed_out2">...</string>
+    <string name="loading">Loading</string>
+    <string name="signed_in_fmt">Usuario: %s</string>
+    <string name="signed_in_fmt2">Correo: %s</string>
+</resources>
